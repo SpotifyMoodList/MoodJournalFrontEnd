@@ -1324,15 +1324,39 @@
   dependencies:
     preact "~10.12.1"
 
-"@fullcalendar/daygrid@^6.1.9":
+"@fullcalendar/daygrid@^6.1.9", "@fullcalendar/daygrid@~6.1.9":
   version "6.1.9"
   resolved "https://registry.npmjs.org/@fullcalendar/daygrid/-/daygrid-6.1.9.tgz"
   integrity sha512-o/6joH/7lmVHXAkbaa/tUbzWYnGp/LgfdiFyYPkqQbjKEeivNZWF1WhHqFbhx0zbFONSHtrvkjY2bjr+Ef2quQ==
+
+"@fullcalendar/interaction@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.npmjs.org/@fullcalendar/interaction/-/interaction-6.1.9.tgz"
+  integrity sha512-I3FGnv0kKZpIwujg3HllbKrciNjTqeTYy3oJG226oAn7lV6wnrrDYMmuGmA0jPJAGN46HKrQqKN7ItxQRDec4Q==
+
+"@fullcalendar/list@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.npmjs.org/@fullcalendar/list/-/list-6.1.9.tgz"
+  integrity sha512-OCKdC1Gz26cJ5QsXdQyXVyzVu23ypT2xzyAR+Wc8jEytcJLWXw2a914m/MVax8n8EHuaIYY2exhsy/eaSU0XNA==
+
+"@fullcalendar/multimonth@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.npmjs.org/@fullcalendar/multimonth/-/multimonth-6.1.9.tgz"
+  integrity sha512-YpH1NL6RzdM1wO2nFJ3pNMo9xhd6i2WuE+e7SnGi7q1lO+ZZ77h5Fja5JKcpuIQUFHpi+m6vTzihIV8DT44NnQ==
+  dependencies:
+    "@fullcalendar/daygrid" "~6.1.9"
 
 "@fullcalendar/react@^6.1.9":
   version "6.1.9"
   resolved "https://registry.npmjs.org/@fullcalendar/react/-/react-6.1.9.tgz"
   integrity sha512-ioxu0V++pYz2u/N1LL1V8DkMyiKGRun0gMAll2tQz3Kzi3r9pTwncGKRb1zO8h0e+TrInU08ywk/l5lBwp7eog==
+
+"@fullcalendar/timegrid@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.npmjs.org/@fullcalendar/timegrid/-/timegrid-6.1.9.tgz"
+  integrity sha512-le7UV05wVE1Trdr054kgJXTwa+A1pEI8nlCBnPWdcyrL+dTLoPvQ4AWEVCnV7So+4zRYaCqnqGXfCJsj0RQa0g==
+  dependencies:
+    "@fullcalendar/daygrid" "~6.1.9"
 
 "@humanwhocodes/config-array@^0.11.11":
   version "0.11.11"
@@ -1693,10 +1717,10 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@remix-run/router@1.9.0":
-  version "1.9.0"
-  resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.9.0.tgz"
-  integrity sha512-bV63itrKBC0zdT27qYm6SDZHlkXwFL1xMBuhkn+X7l0+IIhNaH5wuuvZKp6eKhCD4KFhujhfhCT1YxXW6esUIA==
+"@remix-run/router@1.15.2":
+  version "1.15.2"
+  resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.15.2.tgz"
+  integrity sha512-+Rnav+CaoTE5QJc4Jcwh5toUpnVLKYbpU6Ys0zqbakqbaLQHeglLVHPfxOiQqdNmUy5C2lXz5dwC6tQNX2JW2Q==
 
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
@@ -4918,6 +4942,18 @@ fsevents@^2.3.2, fsevents@~2.3.2:
   resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
   integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
+fullcalendar@^6.1.9:
+  version "6.1.9"
+  resolved "https://registry.npmjs.org/fullcalendar/-/fullcalendar-6.1.9.tgz"
+  integrity sha512-b3y22EqOtV1cGjOlPE6krs1CwQA/8p5lsylllp35tqDLOK7kLIXDQotpXgsDBY4qAKTgdiSauqzdkdvyrbjAgQ==
+  dependencies:
+    "@fullcalendar/core" "~6.1.9"
+    "@fullcalendar/daygrid" "~6.1.9"
+    "@fullcalendar/interaction" "~6.1.9"
+    "@fullcalendar/list" "~6.1.9"
+    "@fullcalendar/multimonth" "~6.1.9"
+    "@fullcalendar/timegrid" "~6.1.9"
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
@@ -7998,20 +8034,20 @@ react-refresh@^0.11.0, "react-refresh@>=0.10.0 <1.0.0":
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
-react-router-dom@^6.16.0:
-  version "6.16.0"
-  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.16.0.tgz"
-  integrity sha512-aTfBLv3mk/gaKLxgRDUPbPw+s4Y/O+ma3rEN1u8EgEpLpPe6gNjIsWt9rxushMHHMb7mSwxRGdGlGdvmFsyPIg==
+react-router-dom@^6.22.2:
+  version "6.22.2"
+  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.22.2.tgz"
+  integrity sha512-WgqxD2qySEIBPZ3w0sHH+PUAiamDeszls9tzqMPBDA1YYVucTBXLU7+gtRfcSnhe92A3glPnvSxK2dhNoAVOIQ==
   dependencies:
-    "@remix-run/router" "1.9.0"
-    react-router "6.16.0"
+    "@remix-run/router" "1.15.2"
+    react-router "6.22.2"
 
-react-router@6.16.0:
-  version "6.16.0"
-  resolved "https://registry.npmjs.org/react-router/-/react-router-6.16.0.tgz"
-  integrity sha512-VT4Mmc4jj5YyjpOi5jOf0I+TYzGpvzERy4ckNSvSh2RArv8LLoCxlsZ2D+tc7zgjxcY34oTz2hZaeX5RVprKqA==
+react-router@6.22.2:
+  version "6.22.2"
+  resolved "https://registry.npmjs.org/react-router/-/react-router-6.22.2.tgz"
+  integrity sha512-YD3Dzprzpcq+tBMHBS822tCjnWD3iIZbTeSXMY9LPSG541EfoBGyZ3bS25KEnaZjLcmQpw2AVLkFyfgXY8uvcw==
   dependencies:
-    "@remix-run/router" "1.9.0"
+    "@remix-run/router" "1.15.2"
 
 react-scripts@5.0.1:
   version "5.0.1"

@@ -4,7 +4,7 @@ import CalendarApp from '../components/Calendar';
 const Calendar = () => { 
   return (
     <div>
-      <h1>Mood Calendar</h1>
+      {/* <h1>Mood Calendar</h1> */}
       <CalendarApp />
     </div>
     //display the calendar
