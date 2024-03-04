@@ -4,6 +4,7 @@ import {
 } from './NavbarElements'; 
 import { useEffect, useState } from 'react';
 import { useSpotify } from '../SpotfiyContext'; // Adjust the path as necessary
+import { Button } from '../../@/components/ui/button';
 
 const Navbar = () => { 
   const { token, handleLogin } = useSpotify();
@@ -50,7 +51,7 @@ const Navbar = () => {
         </NavMenu> 
         <NavBtn>
           {token ? (
-            <button onClick={logout}>Logout</button>
+            <Button onClick={logout}>Logout</Button>
           ) : (
             <NavBtnLink to='/login' onClick={handleLogin}>
               Login with Spotify
