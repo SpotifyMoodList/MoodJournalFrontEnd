@@ -1,32 +1,25 @@
-import React from 'react'; 
-  
-const Home = () => { 
-  return ( 
-    //home page with a black background, a big title, and a button to login
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column', // Stack items vertically
-        justifyContent: 'center', // Center items vertically
-        alignItems: 'center', // Center items horizontally
-        height: '100vh', // Full height of the viewport
-        backgroundColor: 'black', // Set background color to black
-        color: 'white', // Set text color to white for better contrast
-      }}
-    >
-      <h1>Welcome to Mood Journal</h1>
-      <h2>Log in to Spotify to get started</h2>
-      <div style={{
-        position: 'absolute', // Position the login button
-        bottom: '20px' // Place it at the bottom of the screen
-      }}>
-        <a href="http://localhost:3000/login">
-          <button>Login with Spotify</button>
-        </a>
-      </div>
-    </div>
+import React, { useEffect } from "react";
+import { useSpotify } from "../components/SpotfiyContext"; // Adjust the path as necessary
+import { Button } from "../@/components/ui/button";
 
-  ); 
-}; 
-  
+const Home = () => {
+  const { token, handleLogin } = useSpotify();
+
+  useEffect(() => {
+    if (token) {
+      window.location.href = "/calendar";
+    }
+  }, [token]);
+
+  return (
+    //home page with a black background, a big title, and a button to login
+    <div className="w-full h-full bg-black flex flex-col justify-center items-center gap-10">
+      <p className="text-7xl text-white font-bold">Welcome to Moodify!</p>
+      <Button onClick={handleLogin} className="text-xl w-64 h-16">
+        Login with Spotify
+      </Button>
+    </div>
+  );
+};
+
 export default Home;
