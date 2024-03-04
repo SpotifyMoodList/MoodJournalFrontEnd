@@ -3,8 +3,8 @@ import CalendarApp from '../components/Calendar';
   
 const Calendar = () => { 
   return (
-    <div>
-      <h1>Mood Calendar</h1>
+    <div className='bg-[#0F172A] h-full w-full'>
+      {/* <h1>Mood Calendar</h1> */}
       <CalendarApp />
     </div>
     //display the calendar

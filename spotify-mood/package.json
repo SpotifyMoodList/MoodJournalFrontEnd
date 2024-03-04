@@ -6,16 +6,24 @@
     "@fullcalendar/core": "^6.1.9",
     "@fullcalendar/daygrid": "^6.1.9",
     "@fullcalendar/react": "^6.1.9",
+    "@radix-ui/react-slot": "^1.0.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.5.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "fullcalendar": "^6.1.9",
+    "lucide-react": "^0.344.0",
+    "openai": "^4.28.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
-    "react-router-dom": "^6.16.0",
+    "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.10",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
   }
 }
