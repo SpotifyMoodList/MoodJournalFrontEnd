@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, NavLink, Bars, NavBtn } from "./NavbarElements";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useSpotify } from "../SpotfiyContext"; // Adjust the path as necessary
 import { Button } from "../../@/components/ui/button";
 
@@ -9,7 +9,7 @@ const Navbar = () => {
   const [profile, setProfile] = useState("");
   const [profileImage, setProfileImage] = useState("");
 
-  const fetchProfile = async () => {
+  const fetchProfile = useCallback(async () => {
     try {
       const result = await fetch("https://api.spotify.com/v1/me", {
         method: "GET",
@@ -24,7 +24,7 @@ const Navbar = () => {
     } catch (error) {
       console.error("Error fetching user data:", error);
     }
-  };
+  }, [setProfile, setProfileImage, token]);
 
   useEffect(() => {
     if (token) {
