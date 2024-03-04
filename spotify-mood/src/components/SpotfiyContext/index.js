@@ -5,7 +5,7 @@ const SpotifyContext = createContext();
 export const SpotifyProvider = ({ children }) => {
   const [token, setToken] = useState("");
   const CLIENT_ID = "53bbc6ac20964fdc827dfe1f0e6fe93b";
-  const REDIRECT_URI = "http://localhost:3000/";
+  const REDIRECT_URI = "https://mood-journal-front-end.vercel.app/";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
   const SCOPE =
