@@ -1,12 +1,9 @@
 // export default CalendarApp;
 import React, { useState, useEffect } from "react";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
 import { useSpotify } from "../SpotfiyContext";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../@/components/ui/button";
 import { calculateMoodFromSpotifyFeatures } from "../../@/lib/utils";
-import { MoveDown } from "lucide-react";
 import { Loader2 } from "lucide-react";
 
 const CalendarApp = () => {

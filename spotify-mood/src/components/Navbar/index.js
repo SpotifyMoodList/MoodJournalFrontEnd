@@ -1,18 +1,11 @@
 import React from "react";
-import {
-  Nav,
-  NavLink,
-  Bars,
-  NavMenu,
-  NavBtn,
-  NavBtnLink,
-} from "./NavbarElements";
+import { Nav, NavLink, Bars, NavBtn } from "./NavbarElements";
 import { useEffect, useState } from "react";
 import { useSpotify } from "../SpotfiyContext"; // Adjust the path as necessary
 import { Button } from "../../@/components/ui/button";
 
 const Navbar = () => {
-  const { token, handleLogin } = useSpotify();
+  const { token } = useSpotify();
   const [profile, setProfile] = useState("");
   const [profileImage, setProfileImage] = useState("");
 
@@ -37,7 +30,7 @@ const Navbar = () => {
     if (token) {
       fetchProfile();
     }
-  }, [token]);
+  }, [token, fetchProfile]);
 
   const logout = () => {
     window.localStorage.removeItem("spotify_token");
